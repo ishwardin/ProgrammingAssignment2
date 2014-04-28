@@ -1,7 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions calculate the inverse of a square matrix, and include it in the cache to make sure one doesn't have to recompute in case the same matrix is resubmitted for computation
 
-## This is aowxiL 
+## This function makeCacheMatrix creates a special "vector", which is really a list containing a function to
+## sets the value of the vector
+## gets the value of the vector
+## sets the value of the inverse
+## gets the value of the inverse
+
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -19,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function sets the inverse in the cache - however, the function first checks whether the cache already has the vector and the inverse
 
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
